@@ -1,0 +1,9 @@
+MONGODB_HOST: mongodb.srinivasa.fun
+REDIS_HOST: redis.srinivasa.fun
+CATALOGUE_HOST: catalogue.srinivasa.fun
+CART_HOST: cart.srinivasa.fun
+USER_HOST: user.srinivasa.fun
+RABBITMQ_HOST: rabbitmq.srinivasa.fun
+MYSQL_HOST: mysql.srinivasa.fun
+SHIPPING_HOST: shipping.srinivasa.fun
+PAYMENT_HOST: payment.srinivasa.fun

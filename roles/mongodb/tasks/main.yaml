@@ -1,0 +1,21 @@
+  - name: copy mongodb repo
+    ansible.builtin.copy:
+      src: mongo.repo
+      dest: /etc/yum.repos.d/mongo.repo
+
+  - name: Install mongodb server
+    ansible.builtin.package:
+      name: mongodb-org
+      state: present
+
+  - name: Replace a word in a file
+    ansible.builtin.replace:
+      path: /etc/mongod.conf
+      regexp: '127.0.0.1'  # The regular expression to search for
+      replace: '0.0.0.0'  # The string to replace the matched pattern with
+    
+  - name: start and enable service
+    ansible.builtin.service:
+      name: mongod
+      state: started
+      enabled: yes
